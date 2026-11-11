@@ -1,0 +1,11 @@
+name = "ason-pw"
+compatibility_date = "2025-09-01"
+account_id = "ead8c29b274aa64bceed0bfa1c9b4550"
+
+routes = [
+  { pattern = "ason.pw", custom_domain = true },
+  { pattern = "www.ason.pw", custom_domain = true }
+]
+
+[assets]
+directory = "./public"
