@@ -29,4 +29,4 @@ npx wrangler deploy
 
 ## Contact form
 
-Uses [FormSubmit](https://formsubmit.co) (no account). Submit the form once, click the activation email, then replace the address in the form `action` with the random alias FormSubmit provides.
+Uses [FormSubmit](https://formsubmit.co) (no account). Submit the form once, click the activation email, then replace the address in the form `action` with the random alias FormSubmit provides. 
