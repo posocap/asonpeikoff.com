@@ -247,14 +247,6 @@ p, h1, h2, blockquote { margin: 0; }
 .contact-form button:hover { background: var(--button-hover); }
 .contact-form button:active { background: var(--button-active); }
 
-.sent {
-  display: none;
-  font-size: 16px;
-  padding-top: 14px;
-}
-
-.sent:target { display: block; }
-.contact:has(.sent:target) .contact-form { display: none; }
 
 /* ---------- Responsive ---------- */
 
@@ -311,7 +303,6 @@ p, h1, h2, blockquote { margin: 0; }
   .contact-form { grid-template-columns: minmax(0, 1fr); }
   .contact-form textarea { grid-column: auto; }
   .contact-form button { width: 100%; }
-  .sent { padding-top: 0; }
 }
 
 /* Substack link card (sits in the About band; stretches to the text column's height) */
