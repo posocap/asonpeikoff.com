@@ -1,6 +1,10 @@
-# Ason.pw
+# ason.pw
 
-Separate personal-brand site (SEO target: searches for the first name "Ason"), deployed as its own Worker (`ason-pw`), distinct from `asonpeikoff-com`. Adapted from the main site's `public/` with its own title/meta/canonical and a short "about the name" paragraph so it doesn't read as duplicate content to search engines.
+Placeholder "coming soon" page for ason.pw, deployed as its own Worker (`ason-pw`), distinct from `asonpeikoff-com`. Static assets only, served from `public/`:
+
+- `index.html` — the page (black background, white text; no external fonts, scripts, links, or trackers)
+- `404.html` — served for unknown paths (`not_found_handling = "404-page"` in `wrangler.toml`)
+- `favicon.svg`, `robots.txt`, `sitemap.xml`
 
 ## Deploy
 
