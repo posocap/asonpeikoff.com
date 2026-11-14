@@ -1,4 +1,5 @@
 name = "ason-pw"
+main = "src/index.js"
 compatibility_date = "2025-09-01"
 account_id = "ead8c29b274aa64bceed0bfa1c9b4550"
 
@@ -9,4 +10,7 @@ routes = [
 
 [assets]
 directory = "./public"
+binding = "ASSETS"
 not_found_handling = "404-page"
+# Run src/index.js before static assets so http:// and www. always redirect.
+run_worker_first = true

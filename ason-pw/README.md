@@ -1,10 +1,16 @@
 # ason.pw
 
-Placeholder "coming soon" page for ason.pw, deployed as its own Worker (`ason-pw`), distinct from `asonpeikoff-com`. Static assets only, served from `public/`:
+Placeholder "coming soon" page for ason.pw, deployed as its own Worker (`ason-pw`), distinct from `asonpeikoff-com`. Static assets in `public/`, plus a small Worker script:
 
-- `index.html` — the page (black background, white text; no external fonts, scripts, links, or trackers)
-- `404.html` — served for unknown paths (`not_found_handling = "404-page"` in `wrangler.toml`)
+- `index.html` — the page (black background, white text; no external fonts, scripts or trackers). Carries the title, description, canonical, Open Graph/Twitter tags and WebSite JSON-LD.
+- `404.html` — served with a 404 status for unknown paths (`not_found_handling = "404-page"`); `noindex`.
+- `_headers` — security headers (CSP, HSTS, nosniff, frame and referrer policy) for every asset.
 - `favicon.svg`, `robots.txt`, `sitemap.xml`
+
+`src/index.js` runs in front of the assets and does two things:
+
+- 301-redirects `http://` and `www.ason.pw` requests to `https://ason.pw` in a single hop, so only one version of each URL exists.
+- serves the 1200×630 share image at `/og.png` (stored as base64 in `src/og-image.js`).
 
 ## Deploy
 
