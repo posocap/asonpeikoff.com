@@ -2,11 +2,12 @@
  * Footer ad rotator — cross-promotes your sites. Drop on every site (add data-position="fixed" to the div on full-screen pages):
  *   <div id="footer-ads"></div>
  *   <script src="/footer-ads/footer-ad-rotator.js" defer></script>
- * Host the JPEGs at BASE (default /footer-ads/) on each site, or point BASE at one shared host.
+ * Host the JPEGs at BASE (default /footer-ads/) on each site, or set data-base="https://host/footer-ads/" on the <script> tag to load them from another site.
  * The banner for the current site is skipped automatically.
  */
 (function () {
-  var BASE = "/footer-ads/";          // change to e.g. "https://peikoff.net/footer-ads/" to share one copy
+  var cs = document.currentScript;
+  var BASE = (cs && cs.getAttribute("data-base")) || "/footer-ads/";          // change to e.g. "https://peikoff.net/footer-ads/" to share one copy
   var INTERVAL_MS = 5000;
   var FADE_MS = 600;
   var ADS = [
@@ -15,7 +16,7 @@
     { host: "barbarapeikoff.com", img: "barbarapeikoff-com.jpg", alt: "Barbara Peikoff — books, course, film" },
     { host: "postsocialist.com",  img: "postsocialist-com.jpg",  alt: "Post-Socialist Capitalism — Postsocialist Press" },
     { host: "posocap.com",        img: "posocap-com.jpg",        alt: "Atlas of Objectivism — interactive map" },
-    { host: "c-forum.com",        img: "c-forum-com.jpg",        alt: "City Forum — chat and encrypted video meetings" },
+    { host: "mycityforum.com",   img: "mycityforum-com.jpg",   alt: "City Forum — chat and encrypted video meetings" },
     { host: "ason.pw",           img: "ason-pw.jpg",            alt: "ason.pw — an isometric room of Ayn Rand posters and Objectivist websites" },
     { host: "ainrand.com",       img: "ainrand-com.jpg",        alt: "AI Ayn Rand — an Objectivist knowledge agent, on the record" },
     { host: "nooiq.co",           img: "nooiq-co.jpg",           alt: "nooiq.co" },
