@@ -333,3 +333,16 @@ p, h1, h2, blockquote { margin: 0; }
 @media (max-width: 900px) {
   .substack-card img { height: 96px; width: 96px; min-height: 0; }
 }
+
+/* ---------- Book hero + stores ---------- */
+.book-hero { display: block; margin: 0.9rem 0 1rem; border: 1px solid var(--hairline); overflow: hidden; }
+.book-hero img { display: block; width: 100%; height: auto; transition: transform .4s ease, filter .3s; }
+.book-hero:hover img, .book-hero:focus-visible img { transform: scale(1.015); filter: brightness(1.06); }
+.stores { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.6rem; }
+.store { display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 0.7rem; align-items: center; padding: 0.55rem 0.7rem; border: 1px solid var(--hairline); transition: border-color .2s, background .2s; }
+.store:hover, .store:focus-visible { border-color: var(--brand, var(--accent)); background: color-mix(in srgb, var(--brand, var(--accent)) 10%, transparent); color: var(--ink); }
+.store .ico { grid-row: span 2; width: 2.2rem; height: 2.2rem; display: grid; place-items: center; background: var(--brand, var(--accent)); color: #fff; border-radius: 6px; }
+.store .ico svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+.store .mono { font-weight: 800; font-size: 0.72rem; letter-spacing: -0.02em; line-height: 1; }
+.store .st-name { font-weight: 600; line-height: 1.2; }
+.store .st-sub { font-size: 0.78rem; color: var(--muted); line-height: 1.2; }
